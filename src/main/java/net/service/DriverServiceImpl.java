@@ -4,9 +4,11 @@ import net.dao.DriverDao;
 import net.dao.DriverDaoImpl;
 import net.entity.Driver;
 
-public class DriverServiceImpl implements DriverService{
+import java.util.List;
 
-    DriverDao driverDao = new DriverDaoImpl() ;
+public class DriverServiceImpl implements DriverService {
+
+    DriverDao driverDao = new DriverDaoImpl();
 
     @Override
     public void createDriver(Driver driver) {
@@ -14,5 +16,10 @@ public class DriverServiceImpl implements DriverService{
 
     }
 
+    @Override
+    public List<Driver> findAll() {
+        return driverDao.findAll();
+    }
 
 }
+

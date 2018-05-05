@@ -16,6 +16,20 @@ $(document).ready(
             },
             'JSON');
 
+        $.get('/driver',
+            function (data){
+                $.each(data, function(i, driver) {
+                    $('#table_driver')
+                        .append(
+                            '<tr id="'+driver.id+'">' +
+                            '<td>'+driver.name+'</td>' +
+                            '<td>'+driver.surname+'</td>' +
+                            '</tr>'
+                        );
+                });
+            },
+            'JSON');
+
 
         $( "#button" ).click(function() {
             var j = {
@@ -27,7 +41,7 @@ $(document).ready(
 
             // внимателльно смотри !!! не в виде json тк далее идет stringify!!!
 
-            // var jsonTruck = JSON.stringify(j);
+            var jsonTruck = JSON.stringify(j);
 
             $.post('/truck',
                 jsonTruck,
@@ -38,6 +52,24 @@ $(document).ready(
 
         });
 
+        $( "#button2" ).click(function() {
+            var x = {
+                name:  $('[id = name]').val(),
+                surname:   $('[id = surname]').val()
+            };
+
+            // внимателльно смотри !!! не в виде json тк далее идет stringify!!!
+
+            var jsonDriver = JSON.stringify(x);
+
+            $.post('/driver',
+                jsonDriver,
+                function (){
+                    location.reload();
+                }
+            );
+
+        });
     });
 
 function remove(id) {

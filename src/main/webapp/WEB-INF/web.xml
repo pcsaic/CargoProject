@@ -19,4 +19,17 @@
         <servlet-name>ServletTruck</servlet-name>
         <url-pattern>/truck/*</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletDriver</servlet-name>
+        <servlet-class>net.ServletDriver</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletDriver</servlet-name>
+        <url-pattern>/driver</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletDriver</servlet-name>
+        <url-pattern>/driver/*</url-pattern>
+    </servlet-mapping>
 </web-app>
