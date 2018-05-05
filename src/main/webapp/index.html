@@ -1,0 +1,38 @@
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>База по грузоперевозкам.</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="script/jquery.js"></script>
+    <script src="script/js.js"></script>
+</head>
+<body>
+<center>
+    <div id="div_head"><br><br>
+        Добавить грузовик в базу:
+    </div>
+    <div id="div_menu">
+        <table><tr>
+            <td>Номер:<input type="text" id="number"><br></td>
+            <td> Тоннаж:
+                <input type="text" id="tonnage"><br></td>
+            <td>Статус:
+                <input type="text" id="status"><br></td>
+            <td> Место нахождения:
+                <input type="text" id="point"><br></td>
+        </tr></table>   <input type="button" value="Send!" id="button">
+    </div>
+    <div id="div_data">
+        <br><br>
+        Грузовики у Вас в базе: <br><br>
+        <table class="table_blur" id="table_truck">
+            <tr class="tr_truck">
+                <th>Truck <br> number:</th><th>Driver <br>name:</th><th>Truck <br>location:</th><th>Action:</th>
+            </tr>
+        </table>
+    </div>
+    <h1>Log in</h1>
+    <p><a href="login.html">Перейти</a></p>
+</center>
+</body>
+</html>
